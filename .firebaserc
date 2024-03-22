@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rtdb-lot": {
+      "hosting": {
+        "app": [
+          "rtdb-lot"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rtdb-lot"
+  }
+}

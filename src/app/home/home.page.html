@@ -1,20 +1,41 @@
-<ion-header [translucent]="true">
+
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Casa
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <div class="espacio" id="baño" (click)="toggleLuminaria('baño')">
+          <img src="assets/images/baño.jpg" alt="Baño">
+          <ion-toggle [(ngModel)]="luminarias['baño'].estado"></ion-toggle>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="espacio" id="cocina" (click)="toggleLuminaria('cocina')">
+          <img src="assets/images/cocina.jpg" alt="Cocina">
+          <ion-toggle [(ngModel)]="luminarias['cocina'].estado"></ion-toggle>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <div class="espacio" id="dormitorio" (click)="toggleLuminaria('dormitorio')">
+          <img src="assets/images/dormitorio.jpg" alt="Dormitorio">
+          <ion-toggle [(ngModel)]="luminarias['dormitorio'].estado"></ion-toggle>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="espacio" id="sala" (click)="toggleLuminaria('sala')">
+          <img src="assets/images/sala.jpg" alt="Sala">
+          <ion-toggle [(ngModel)]="luminarias['sala'].estado"></ion-toggle>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
